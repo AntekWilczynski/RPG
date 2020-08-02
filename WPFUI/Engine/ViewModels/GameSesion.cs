@@ -20,12 +20,6 @@ namespace Engine.ViewModels
             CurrentPlayer.HitPoints = 10;
             CurrentPlayer.Level = 1;
 
-
-
-
-
         }
-
-
     }
 }
