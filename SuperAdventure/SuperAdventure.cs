@@ -30,6 +30,6 @@ namespace SuperAdventure
             lblGold.Text = _player.Gold.ToString();
             lblExp.Text = _player.ExperiencePoints.ToString();
             lblLvl.Text = _player.Level.ToString();
-        }
+        } 
     }
 }
