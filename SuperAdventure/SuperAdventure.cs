@@ -18,18 +18,19 @@ namespace SuperAdventure
         public SuperAdventure()
         {
             InitializeComponent();
-            _player = new Player();
 
-            _player.CurrentHitPoints = 10;
-            _player.MaximumHitPoints = 10;
-            _player.Gold = 20;
-            _player.ExperiencePoints = 0;
-            _player.Level = 1;
+            Location location = new Engine.Location(1, "Home", "This is your house.");
+            location.ID = 1;
+            location.Name = "Home";
+            location.Description = "This is your house.";
 
+            _player = new Player(10, 10, 10, 0, 1);
+     
             lblHP.Text = _player.CurrentHitPoints.ToString();
             lblGold.Text = _player.Gold.ToString();
             lblExp.Text = _player.ExperiencePoints.ToString();
             lblLvl.Text = _player.Level.ToString();
+            
         } 
     }
 }
