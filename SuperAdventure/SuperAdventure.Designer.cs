@@ -129,6 +129,7 @@
             this.btnEast.TabIndex = 8;
             this.btnEast.Text = "WSCHÓD";
             this.btnEast.UseVisualStyleBackColor = true;
+            this.btnEast.Click += new System.EventHandler(this.btnEast_Click);
             // 
             // btnUseWeapon
             // 
@@ -138,6 +139,7 @@
             this.btnUseWeapon.TabIndex = 9;
             this.btnUseWeapon.Text = "UŻYJ";
             this.btnUseWeapon.UseVisualStyleBackColor = true;
+            this.btnUseWeapon.Click += new System.EventHandler(this.btnUseWeapon_Click);
             // 
             // btnUsePotion
             // 
@@ -147,6 +149,7 @@
             this.btnUsePotion.TabIndex = 10;
             this.btnUsePotion.Text = "UŻYJ";
             this.btnUsePotion.UseVisualStyleBackColor = true;
+            this.btnUsePotion.Click += new System.EventHandler(this.btnUsePotion_Click);
             // 
             // btnSouth
             // 
@@ -156,6 +159,7 @@
             this.btnSouth.TabIndex = 11;
             this.btnSouth.Text = "POŁUDNIE";
             this.btnSouth.UseVisualStyleBackColor = true;
+            this.btnSouth.Click += new System.EventHandler(this.btnSouth_Click);
             // 
             // btnNorth
             // 
@@ -165,6 +169,7 @@
             this.btnNorth.TabIndex = 12;
             this.btnNorth.Text = "PÓŁNOC";
             this.btnNorth.UseVisualStyleBackColor = true;
+            this.btnNorth.Click += new System.EventHandler(this.btnNorth_Click);
             // 
             // btnWest
             // 
@@ -174,6 +179,7 @@
             this.btnWest.TabIndex = 13;
             this.btnWest.Text = "ZACHÓD";
             this.btnWest.UseVisualStyleBackColor = true;
+            this.btnWest.Click += new System.EventHandler(this.btnWest_Click);
             // 
             // cboWeapons
             // 
