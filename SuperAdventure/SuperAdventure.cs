@@ -21,14 +21,12 @@ namespace SuperAdventure
         {
             InitializeComponent();
 
-            _player = new Player(10, 10, 20, 0, 1);
+            _player = new Player(10, 10, 20, 0);
             MoveTo(World.LocationByID(World.LOCATION_ID_HOME));
             _player.Inventory.Add(new InventoryItem(World.ItemByID(World.ITEM_ID_RUSTY_SWORD), 1));
 
-            lblHP.Text = _player.CurrentHitPoints.ToString();
-            lblGold.Text = _player.Gold.ToString();
-            lblExp.Text = _player.ExperiencePoints.ToString();
-            lblLvl.Text = _player.Level.ToString();
+            UpdatePlayerStats();
+           
         }
 
         private void btnNorth_Click(object sender, EventArgs e)
@@ -179,7 +177,9 @@ namespace SuperAdventure
                 btnUseWeapon.Visible = false;
                 btnUsePotion.Visible = false;
             }
-
+            // Refresh player information and inventory controls
+            UpdatePlayerStats();
+           
             // Refresh player's inventory list
             UpdateInventoryListInUI();
 
@@ -212,7 +212,14 @@ namespace SuperAdventure
                 }
             }
         }
-
+        private void UpdatePlayerStats()
+        {
+            // Refresh player information and inventory controls
+            lblHP.Text = _player.CurrentHitPoints.ToString();
+            lblGold.Text = _player.Gold.ToString();
+            lblExp.Text = _player.ExperiencePoints.ToString();
+            lblLvl.Text = _player.Level.ToString();
+        }
         private void UpdateQuestListInUI()
         {
             dgvQuests.RowHeadersVisible = false;
@@ -365,7 +372,8 @@ namespace SuperAdventure
                 lblGold.Text = _player.Gold.ToString();
                 lblExp.Text = _player.ExperiencePoints.ToString();
                 lblLvl.Text = _player.Level.ToString();
-
+                
+                UpdatePlayerStats();
                 UpdateInventoryListInUI();
                 UpdateWeaponListInUI();
                 UpdatePotionListInUI();
@@ -454,6 +462,12 @@ namespace SuperAdventure
             lblHP.Text = _player.CurrentHitPoints.ToString();
             UpdateInventoryListInUI();
             UpdatePotionListInUI();
+        }
+
+        private void rtbMessages_TextChanged(object sender, EventArgs e) 
+        { 
+                rtbMessages.SelectionStart = rtbMessages.Text.Length;
+                rtbMessages.ScrollToCaret();
         }
     }
 }

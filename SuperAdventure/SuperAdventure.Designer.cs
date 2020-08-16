@@ -202,9 +202,11 @@
             this.rtbMessages.Location = new System.Drawing.Point(318, 123);
             this.rtbMessages.Name = "rtbMessages";
             this.rtbMessages.ReadOnly = true;
+            this.rtbMessages.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.ForcedVertical;
             this.rtbMessages.Size = new System.Drawing.Size(825, 323);
             this.rtbMessages.TabIndex = 16;
             this.rtbMessages.Text = "";
+            this.rtbMessages.TextChanged += new System.EventHandler(this.rtbMessages_TextChanged);
             // 
             // rtbLocation
             // 
